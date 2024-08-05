@@ -1,0 +1,39 @@
+.site{
+    padding: 2px;
+
+    h3{
+        font-size: 25px;
+        font-family:sans-serif;
+        margin:  25px 10px 25px 10px;
+    }
+}
+.topsection{
+    border: 1px solid rgb(230, 222, 222);
+    padding: 26px;
+    margin-top: 12px;
+    box-shadow: 0 2px 3px 0 rgba(43, 25, 102, 0.199), 0 4px 15px 0 rgba(41, 33, 96, 0.19);
+    h4{
+        color: rgb(88, 84, 84);
+    }
+    .date{
+        color: rgb(177, 171, 171);
+        font-size: 13px;
+        
+    }
+}
+.btntopic{
+ padding: 20px;
+  
+ .atext{
+    color: rgb(0, 68, 255);
+    cursor: pointer;
+ }
+}
+
+.perma{
+width: 100%;
+    a{
+        float: right;
+        text-decoration: none;
+    }
+}
