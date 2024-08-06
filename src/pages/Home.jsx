@@ -10,6 +10,14 @@ import Avatar from '@mui/material/Avatar';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Site from '../Components/Site-anouncement/site';
+import ListItem from '@mui/material/ListItem';
+import FolderIcon from '@mui/icons-material/Folder';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Semlist from '../Components/Sem-list/Semlist';
+
+
+
+
 
 //online offline stetus
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -84,18 +92,17 @@ export class Home extends Component {
                 <h4 style={{ fontSize: '15px', lineHeight: '30px' }}>BIT සිසුන් සඳහා වූ අතථ්‍ය ඉගෙනුම් පරිස්ථිතියට ඔබව සාදරයෙන් පිළිගනිමු!</h4>
                 <h4 style={{ fontSize: '15px', lineHeight: '30px' }}>BIT மாணவர்களை மெய்நிகர் கற்றல் சுற்றுச்சூழல்ற்கு வரவேற்கிறோம்!</h4>
                 <h2 style={{ lineHeight: '60px', fontSize: '35px' }}>Academic Year 2023</h2>
-                <Button style={{width:'200px',marginTop:'10px'}} variant="contained" size="medium">Visit Announcement</Button>
-            
+                <Button style={{ width: '200px', marginTop: '10px' }} variant="contained" size="medium">Visit Announcement</Button>
+
               </div>
 
             </div>
             <div>
-             <Site/>
+              <Site />
             </div>
-          
           </div>
 
-         
+
           <div className="rightside">
             <div className='calcontrol'>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -104,7 +111,7 @@ export class Home extends Component {
             </div>
 
             <div className='stetus' id='demo'>
-              <p style={{fontWeight:'bold',paddingBottom:'7px',fontSize:'18px'}}>Online Users</p>
+              <p style={{ fontWeight: 'bold', paddingBottom: '7px', fontSize: '18px' }}>Online Users</p>
               <div className='ste'>
                 <StyledBadge
                   overlap="circular"
@@ -113,7 +120,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/OIP.jpeg" />
                 </StyledBadge>
-                <span style={{ margin: '25px' }}>Supun Nethsara</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)' }}>Supun Nethsara</span>
               </div>
 
               <div className='ste'>
@@ -124,7 +131,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/boys-profile-pics-847.jpg" />
                 </StyledBadged>
-                <span style={{ margin: '25px' }}>Nishan Madhushka</span>
+                <span style={{ margin: '25px',color:'rgb(100, 97, 97)' }}>Nishan Madhushka</span>
               </div>
 
               <div className='ste'>
@@ -135,7 +142,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/boys.webp" />
                 </StyledBadge>
-                <span style={{ margin: '25px' }}>Dimuth Karunarathne</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>Dimuth Karunarathne</span>
               </div>
 
               <div className='ste'>
@@ -146,7 +153,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/OIP1.jpeg" />
                 </StyledBadge>
-                <span style={{ margin: '25px' }}>Dinesh Chandimal</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>Dinesh Chandimal</span>
               </div>
 
               <div className='ste'>
@@ -154,15 +161,35 @@ export class Home extends Component {
                   overlap="circular"
                   anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                   variant="dot"
-                  
-                  
+
+
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/R.jpeg" />
                 </StyledBadged>
-                <span style={{ margin: '25px' }}>Prasadi Thakshila</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>Prasadi Thakshila</span>
               </div>
 
             </div>
+
+            <div className='Corce'>
+              <h4>My Corces</h4>
+
+                <ListItem className='folder'><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>Past papers</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT2406 Web Application Development</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT2306 DataBase System</h6></ListItem> 
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT2206 Software eniginnering</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>EN2106 Mathematics for Computing</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4506 Computer Network</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4406 Agile Software Development</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4306 Project Management</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4206 Enterprice Application Development</h6></ListItem>
+             
+            </div>
+
+            <div className="sem">
+            <Semlist/>
+            </div>
+
 
           </div>
         </div>

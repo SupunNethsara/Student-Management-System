@@ -160,7 +160,7 @@ export default function Sidebar() {
 
 
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -201,7 +201,7 @@ export default function Sidebar() {
   };
 
   const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+    setAnchorEl(event.currentTarget);
   };
 
 
@@ -268,7 +268,7 @@ export default function Sidebar() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar>
+        <Toolbar sx={{backgroundColor:'#'}}>
           <IconButton 
             color="inherit"
             aria-label="open drawer"

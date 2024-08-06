@@ -1,3 +1,7 @@
+*{
+    font-family: 'Roboto', sans-serif;;
+}
+
 .mainly {
     width: 100%;
     height: auto;
@@ -62,4 +66,25 @@
     }
 }
  
+.Corce{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px 0 rgba(83, 75, 202, 0.199), 0 4px 15px 0 rgba(71, 73, 196, 0.19);
+    padding: 15px;
 
+    h6{
+        font-size: 14px;
+        color: #0D82FE;
+        
+    }
+    h6:hover{
+        cursor: pointer;
+        color: black;
+    }
+   h4{
+    font-size: 18px;
+    font-weight: bold;
+    }
+ 
+}
