@@ -14,7 +14,7 @@ import ListItem from '@mui/material/ListItem';
 import FolderIcon from '@mui/icons-material/Folder';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Semlist from '../Components/Sem-list/Semlist';
-
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
 
 
@@ -111,7 +111,7 @@ export class Home extends Component {
             </div>
 
             <div className='stetus' id='demo'>
-              <p style={{ fontWeight: 'bold', paddingBottom: '7px', fontSize: '18px' }}>Online Users</p>
+              <p style={{ fontWeight: 'bold', paddingBottom: '7px', fontSize: '18px' ,color:'#5d5f61'}}>Online Users</p>
               <div className='ste'>
                 <StyledBadge
                   overlap="circular"
@@ -120,7 +120,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/OIP.jpeg" />
                 </StyledBadge>
-                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)' }}>Supun Nethsara</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)' }}>K.S.N Dharmathilaka</span>
               </div>
 
               <div className='ste'>
@@ -131,7 +131,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/boys-profile-pics-847.jpg" />
                 </StyledBadged>
-                <span style={{ margin: '25px',color:'rgb(100, 97, 97)' }}>Nishan Madhushka</span>
+                <span style={{ margin: '25px',color:'rgb(100, 97, 97)' }}>N.M Madhuska</span>
               </div>
 
               <div className='ste'>
@@ -142,7 +142,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/boys.webp" />
                 </StyledBadge>
-                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>Dimuth Karunarathne</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>D.M Rajapaksha</span>
               </div>
 
               <div className='ste'>
@@ -153,7 +153,7 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/OIP1.jpeg" />
                 </StyledBadge>
-                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>Dinesh Chandimal</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>D.M Rathnayaka</span>
               </div>
 
               <div className='ste'>
@@ -166,13 +166,14 @@ export class Home extends Component {
                 >
                   <Avatar alt="Remy Sharp" src="src/assets/R.jpeg" />
                 </StyledBadged>
-                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>Prasadi Thakshila</span>
+                <span style={{ margin: '25px' ,color:'rgb(100, 97, 97)'}}>W.R Wickramasinghe</span>
+                
               </div>
 
             </div>
 
             <div className='Corce'>
-              <h4>My Corces</h4>
+              <h4>< AccountBalanceIcon sx={{color:'#5d5f61'}}/><span style={{padding:'15px',color:'#5d5f61'}}>My Corces</span> </h4>
 
                 <ListItem className='folder'><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>Past papers</h6></ListItem>
                 <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT2406 Web Application Development</h6></ListItem>
