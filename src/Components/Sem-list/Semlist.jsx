@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -8,12 +8,18 @@ import SchoolIcon from '@mui/icons-material/School';
 import Diversity2Icon from '@mui/icons-material/Diversity2';
 
 export default function Semlist() {
+    const [expanded, setExpanded] = useState('panel1a');
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+      };
+    
   return (
     <div className='sem'>
         <div>
             <h6 style={{padding:"10px" , fontSize:'15px' ,color:'#5d5f61',fontWeight:'600'}}> <span style={{padding:'10px'}}><SchoolIcon/></span>  Bechalor Of Information Technology </h6>
         </div>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel1a'}
+        onChange={handleChange('panel1a')}>
       
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -24,15 +30,16 @@ export default function Semlist() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-           <li> <Diversity2Icon sx={{color:'#C0C0C0'}}/> IT2406 Web Application Development</li> 
-           <li> <Diversity2Icon sx={{color:'#C0C0C0'}}/> IT2306 Database Systems</li>
-           <li> <Diversity2Icon sx={{color:'#C0C0C0'}}/> IT2206 Software Engineering</li>
-           <li> <Diversity2Icon sx={{color:'#C0C0C0'}}/> IT2106 Mathematics for Computing</li>
-           <li> <Diversity2Icon sx={{color:'#C0C0C0'}}/> EN2106 Communication Skills</li>
+           <li> <Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/> IT2406 Web Application Development</li> 
+           <li> <Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/> IT2306 Database Systems</li>
+           <li> <Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/> IT2206 Software Engineering</li>
+           <li> <Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/> IT2106 Mathematics for Computing</li>
+           <li> <Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/> EN2106 Communication Skills</li>
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion    expanded={expanded === 'panel2a'}
+        onChange={handleChange('panel2a')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -42,11 +49,11 @@ export default function Semlist() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-           <li><Diversity2Icon sx={{color:'#C0C0C0'}}/>IT2406 Web Application Development</li> 
-           <li><Diversity2Icon sx={{color:'#C0C0C0'}}/>IT2306 Database Systems</li>
-           <li><Diversity2Icon sx={{color:'#C0C0C0'}}/>IT2206 Software Engineering</li>
-           <li><Diversity2Icon sx={{color:'#C0C0C0'}}/>IT2106 Mathematics for Computing</li>
-           <li><Diversity2Icon sx={{color:'#C0C0C0'}}/>EN2106 Communication Skills</li>
+           <li><Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/>IT2406 Web Application Development</li> 
+           <li><Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/>IT2306 Database Systems</li>
+           <li><Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/>IT2206 Software Engineering</li>
+           <li><Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/>IT2106 Mathematics for Computing</li>
+           <li><Diversity2Icon sx={{color:'#C0C0C0',marginRight:'10px'}}/>EN2106 Communication Skills</li>
          </Typography>
         </AccordionDetails>
       </Accordion>
