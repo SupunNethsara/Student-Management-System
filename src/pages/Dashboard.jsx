@@ -32,7 +32,7 @@ import HouseIcon from '@mui/icons-material/House';
 import { useEffect } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
-
+import Footer from '../Components/Fotterdesign/Footer';
 
 
 
@@ -404,11 +404,13 @@ export default function Sidebar() {
       </Drawer>
 
 
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
         <DrawerHeader />
         <Outlet />
+        <Footer/>
       </Box>
 
     </Box>
+   
   );
 }

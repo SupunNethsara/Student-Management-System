@@ -16,7 +16,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Semlist from '../Components/Sem-list/Semlist';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-
+import Footer from '../Components/Fotterdesign/Footer';
 
 
 //online offline stetus
@@ -173,17 +173,17 @@ export class Home extends Component {
             </div>
 
             <div className='Corce'>
-              <h4>< AccountBalanceIcon sx={{color:'#5d5f61'}}/><span style={{padding:'15px',color:'#5d5f61'}}>My Corces</span> </h4>
+              <h4 style={{fontSize:'18px'}}>< AccountBalanceIcon sx={{color:'#5d5f61'}}/><span style={{padding:'15px',color:'#5d5f61'}}>My Corces</span> </h4>
 
-                <ListItem className='folder'><ListItemIcon><FolderIcon  sx={{width:'22px' ,color:'#C0C0C0'}} /></ListItemIcon><h6>Past papers</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px' ,color:'#C0C0C0'}} /></ListItemIcon><h6>IT2406 Web Application Development</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px',color:'#C0C0C0'}} /></ListItemIcon><h6>IT2306 DataBase System</h6></ListItem> 
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px',color:'#C0C0C0'}} /></ListItemIcon><h6>IT2206 Software eniginnering</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px',color:'#C0C0C0'}} /></ListItemIcon><h6>EN2106 Mathematics for Computing</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px',color:'#C0C0C0'}} /></ListItemIcon><h6>IT4506 Computer Network</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px',color:'#C0C0C0'}} /></ListItemIcon><h6>IT4406 Agile Software Development</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px',color:'#C0C0C0'}} /></ListItemIcon><h6>IT4306 Project Management</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px',color:'#C0C0C0'}} /></ListItemIcon><h6>IT4206 Enterprice Application Development</h6></ListItem>
+                <ListItem className='folder'><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>Past papers</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT2406 Web Application Development</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT2306 DataBase System</h6></ListItem> 
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT2206 Software eniginnering</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>EN2106 Mathematics for Computing</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4506 Computer Network</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4406 Agile Software Development</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4306 Project Management</h6></ListItem>
+                <ListItem><ListItemIcon><FolderIcon  sx={{width:'22px'}} /></ListItemIcon><h6>IT4206 Enterprice Application Development</h6></ListItem>
              
             </div>
 
@@ -194,9 +194,9 @@ export class Home extends Component {
 
           </div>
         </div>
-
-
-      </div>
+   
+       </div>
+      
     )
   }
 }
