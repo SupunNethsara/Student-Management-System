@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, useTheme ,alpha } from '@mui/material/styles';
+import { styled, useTheme, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
@@ -22,14 +22,14 @@ import { Link, NavLink, Navigate, Outlet, useNavigate, useNavigation } from 'rea
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Typography } from '@mui/material';
 import InputBase from '@mui/material/InputBase';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import SchoolIcon from '@mui/icons-material/School';
 import HouseIcon from '@mui/icons-material/House';
-import { useEffect } from 'react';
+import MoreIcon from '@mui/icons-material/MoreVert';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import Footer from '../Components/Fotterdesign/Footer';
@@ -209,13 +209,13 @@ export default function Sidebar() {
 
   /////////////////////////////////////////////////////////////////////////////////////AppBar Icons////////////////////////////////////////////////////////////
   const menuId = 'primary-search-account-menu';
-  const navigate =useNavigate();
-  const Logout =()=>{
+  const navigate = useNavigate();
+  const Logout = () => {
     window.localStorage.removeItem("isLogedin")
     navigate('/login')
   }
   const renderMenu = (
-    <Menu 
+    <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
         vertical: 'top',
@@ -232,7 +232,7 @@ export default function Sidebar() {
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={()=>Logout()}>Log out</MenuItem>
+      <MenuItem onClick={() => Logout()}>Log out</MenuItem>
     </Menu>
   );
 
@@ -253,7 +253,40 @@ export default function Sidebar() {
       }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
-    ></Menu>
+    >
+      <MenuItem>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <MailIcon />
+          </Badge>
+        </IconButton>
+        <p>Messages</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <Badge badgeContent={17} color="error">
+            <NotificationsIcon />
+          </Badge>
+        </IconButton>
+        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
+        <p>Profile</p>
+      </MenuItem>
+    </Menu>
   );
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -268,8 +301,8 @@ export default function Sidebar() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar sx={{backgroundColor:'#'}}>
-          <IconButton 
+        <Toolbar sx={{ backgroundColor: '#' }}>
+          <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -290,31 +323,31 @@ export default function Sidebar() {
             VLE for eBIT
           </Typography>
           <div>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </Search>
           </div>
-         
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-          <IconButton style={{margin:'5px'}}
-               size="large"
-               aria-label="show 17 new notifications"
-               color="inherit"
-               
+            <IconButton style={{ margin: '5px' }}
+              size="large"
+              aria-label="show 17 new notifications"
+              color="inherit"
+
             >
               <Badge badgeContent={5} color="error">
                 <ManageAccountsIcon />
               </Badge>
-             
+
             </IconButton>
-            <IconButton  style={{margin:'5px'}}
+            <IconButton style={{ margin: '5px' }}
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
@@ -323,7 +356,7 @@ export default function Sidebar() {
                 <MailIcon />
               </Badge>
             </IconButton>
-            <IconButton  style={{margin:'5px'}}
+            <IconButton style={{ margin: '5px' }}
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -333,12 +366,23 @@ export default function Sidebar() {
               </Badge>
             </IconButton>
             <Tooltip title="Open settings">
-              <IconButton style={{margin:'10px'}}   onClick={handleProfileMenuOpen} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp"  src="src/assets/OIP.jpeg"/>
+              <IconButton style={{ margin: '10px' }} onClick={handleProfileMenuOpen} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp" src="src/assets/OIP.jpeg" />
               </IconButton>
             </Tooltip>
           </Box>
-
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+            >
+              <MoreIcon />
+            </IconButton>
+          </Box>
           {renderMobileMenu}
           {renderMenu}
         </Toolbar>
@@ -407,10 +451,10 @@ export default function Sidebar() {
       <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
         <DrawerHeader />
         <Outlet />
-        <Footer/>
+        <Footer />
       </Box>
 
     </Box>
-   
+
   );
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './CSS/Home.scss'
 import dayjs from 'dayjs';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
@@ -16,7 +16,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Semlist from '../Components/Sem-list/Semlist';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import Footer from '../Components/Fotterdesign/Footer';
+
 
 
 //online offline stetus
@@ -106,8 +106,9 @@ export class Home extends Component {
           <div className="rightside">
             <div className='calcontrol'>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DateCalendar />
+                <DateCalendar sx={{padding:'5px'}}/>
               </LocalizationProvider>
+            
             </div>
 
             <div className='stetus' id='demo'>
