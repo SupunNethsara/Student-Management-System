@@ -92,8 +92,8 @@ export class Home extends Component {
 
         <div className='mainly'>
           <div className="leftside">
-            <div className="img">
-              <div style={{ padding: '40px' }}>
+            <div className="imgg">
+              <div className='contentsec' style={{ padding: '40px' }}>
                 <img src="src/assets/ucsc-logo.png" alt="" className="imgpng" />
                 <h3 style={{ fontSize: '18px', lineHeight: '40px' }}>University of Colombo School of Computing</h3>
                 <h4 style={{ fontSize: '20px', lineHeight: '40px' }}>Welcome to the Virtual Learning Environment for the BIT Students</h4>
@@ -115,86 +115,86 @@ export class Home extends Component {
             <div className='calcontrol'>
               <ResponsiveDateCalendar />
             </div>
-            <div className="online_corceslist">
+<div className="online_corceslist">
 
-              <div className='stetus' id='demo'>
-                <p style={{ fontWeight: 'bold', paddingBottom: '7px', fontSize: '18px', color: '#5d5f61' }}><span style={{ padding: '10px' }}><PeopleAltIcon /></span> Online Users</p>
-                <div className='ste'>
-                  <StyledBadge
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-                  >
-                    <Avatar alt="Remy Sharp" src="src/assets/OIP.jpeg" />
-                  </StyledBadge>
-                  <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>K.S.N Dharmathilaka</span>
-                </div>
-
-                <div className='ste'>
-                  <StyledBadged
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-                  >
-                    <Avatar alt="Remy Sharp" src="src/assets/boys-profile-pics-847.jpg" />
-                  </StyledBadged>
-                  <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>N.M Madhuska</span>
-                </div>
-
-                <div className='ste'>
-                  <StyledBadge
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-                  >
-                    <Avatar alt="Remy Sharp" src="src/assets/boys.webp" />
-                  </StyledBadge>
-                  <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>D.M Rajapaksha</span>
-                </div>
-
-                <div className='ste'>
-                  <StyledBadge
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-                  >
-                    <Avatar alt="Remy Sharp" src="src/assets/OIP1.jpeg" />
-                  </StyledBadge>
-                  <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>D.M Rathnayaka</span>
-                </div>
-
-                <div className='ste'>
-                  <StyledBadged
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-
-
-                  >
-                    <Avatar alt="Remy Sharp" src="src/assets/R.jpeg" />
-                  </StyledBadged>
-                  <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>W.R Wickramasinghe</span>
-
-                </div>
-
+<div className='stetus' id='demo'>
+              <p style={{ fontWeight: 'bold', paddingBottom: '7px', fontSize: '18px', color: '#5d5f61' }}><span style={{ padding: '10px' }}><PeopleAltIcon /></span> Online Users</p>
+              <div className='ste'>
+                <StyledBadge
+                  overlap="circular"
+                  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                  variant="dot"
+                >
+                  <Avatar alt="Remy Sharp" src="src/assets/OIP.jpeg" />
+                </StyledBadge>
+                <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>K.S.N Dharmathilaka</span>
               </div>
 
-              <div className='Corce'>
-                <h4 style={{ fontSize: '18px' }}>< AccountBalanceIcon sx={{ color: '#5d5f61' }} /><span style={{ padding: '15px', color: '#5d5f61' }}>My Corces</span> </h4>
+              <div className='ste'>
+                <StyledBadged
+                  overlap="circular"
+                  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                  variant="dot"
+                >
+                  <Avatar alt="Remy Sharp" src="src/assets/boys-profile-pics-847.jpg" />
+                </StyledBadged>
+                <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>N.M Madhuska</span>
+              </div>
 
-                <ListItem className='folder'><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>Past papers</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT2406 Web Application Development</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT2306 DataBase System</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT2206 Software eniginnering</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>EN2106 Mathematics for Computing</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4506 Computer Network</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4406 Agile Software Development</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4306 Project Management</h6></ListItem>
-                <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4206 Enterprice Application Development</h6></ListItem>
+              <div className='ste'>
+                <StyledBadge
+                  overlap="circular"
+                  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                  variant="dot"
+                >
+                  <Avatar alt="Remy Sharp" src="src/assets/boys.webp" />
+                </StyledBadge>
+                <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>D.M Rajapaksha</span>
+              </div>
+
+              <div className='ste'>
+                <StyledBadge
+                  overlap="circular"
+                  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                  variant="dot"
+                >
+                  <Avatar alt="Remy Sharp" src="src/assets/OIP1.jpeg" />
+                </StyledBadge>
+                <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>D.M Rathnayaka</span>
+              </div>
+
+              <div className='ste'>
+                <StyledBadged
+                  overlap="circular"
+                  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                  variant="dot"
+
+
+                >
+                  <Avatar alt="Remy Sharp" src="src/assets/R.jpeg" />
+                </StyledBadged>
+                <span style={{ margin: '25px', color: 'rgb(100, 97, 97)' }}>W.R Wickramasinghe</span>
 
               </div>
 
             </div>
+
+            <div className='Corce'>
+              <h4 style={{ fontSize: '18px' }}>< AccountBalanceIcon sx={{ color: '#5d5f61' }} /><span style={{ padding: '15px', color: '#5d5f61' }}>My Corces</span> </h4>
+
+              <ListItem className='folder'><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>Past papers</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT2406 Web Application Development</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT2306 DataBase System</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT2206 Software eniginnering</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>EN2106 Mathematics for Computing</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4506 Computer Network</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4406 Agile Software Development</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4306 Project Management</h6></ListItem>
+              <ListItem><ListItemIcon><FolderIcon sx={{ width: '22px' }} /></ListItemIcon><h6>IT4206 Enterprice Application Development</h6></ListItem>
+
+            </div>
+
+</div>
             <div className="sem">
               <Semlist />
             </div>

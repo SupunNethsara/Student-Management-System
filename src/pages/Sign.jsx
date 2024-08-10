@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import './signup.css'
+import './Login.scss'
 function Sign() {
 
     // const [values, setValues] = useState({
@@ -43,7 +43,8 @@ function Sign() {
         <div>
             <div className="main">
                 <div className="img">
-                    <img src="/src/assets/img1.png" alt="" />
+                <img className='openimg' src="/src/assets/online.png" alt="" />
+                <img className='hideimg' src="/src/assets/online2.png" alt="" />
                 </div>
                 <div className="Form">
 
@@ -69,7 +70,7 @@ function Sign() {
                         </div>
                         <button type='submit' style={{ color: 'white' }} className='btn btn-sucess w-100 rounded-0'>Sign up</button>
                         <p>You are agree to your tearms and policies</p>
-                        <Link to="/" className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Login</Link>
+                        <Link to="/login" className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Login</Link>
 
 
                     </form>
