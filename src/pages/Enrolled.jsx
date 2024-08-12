@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-
+import Classroom from '../Components/Classroom/Classroom'
 export class Enrolled extends Component {
   render() {
     return (
-      <div>Enrolled</div>
+      <div>
+<Classroom/>
+      </div>
     )
   }
 }
