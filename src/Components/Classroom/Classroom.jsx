@@ -180,6 +180,18 @@ export default function Classroom() {
     },
 
   ];
+
+
+  const handleExpandClick = (classId) => {
+    setSelectedClass(classId);
+    setExpanded(!expanded);
+  };
+
+  const handleBackClick = () => {
+    setSelectedClass(null);
+    setExpanded(false);
+  };
+
   ///Upcoming activities/////////////////////////////////////////////////////////////////////
 
   //////////////////////////////////////////////////////////////////////////
