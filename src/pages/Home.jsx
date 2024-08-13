@@ -112,7 +112,7 @@ export class Home extends Component {
 
 
           <div className="rightside">
-            <div className='calcontrol'>
+            <div style={{marginTop:"15px"}} className='calcontrol'>
               <ResponsiveDateCalendar />
             </div>
 <div className="online_corceslist">

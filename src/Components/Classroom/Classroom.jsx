@@ -11,6 +11,9 @@ import FolderIcon from "@mui/icons-material/Folder";
 import Typography from "@mui/material/Typography";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
+import ResponsiveDateCalendar from "../calender/ResponsiveDateCalendar";
+import CustomizedMenus from "./button/CustomizedMenus";
+import Menuitem from "./button/Menuitem";
 import './Classroom.scss'
 
 const FlexContainer = styled("div")({
@@ -18,23 +21,23 @@ const FlexContainer = styled("div")({
   flexWrap: "wrap",
   justifyContent: "space-between",
   gap: "20px",
-  padding: "10px", 
+  padding: "10px",
 });
 
 const FlexItem = styled("div")({
   flexBasis: "100%",
   '@media (min-width: 700px)': {
-    flexBasis: "100%",  
+    flexBasis: "100%",
   },
   '@media (min-width: 600px)': {
-    flexBasis: "100%", 
- 
+    flexBasis: "100%",
+
   },
   '@media (min-width: 900px)': {
-    flexBasis: "30%", 
+    flexBasis: "30%",
   },
-  marginBottom: "20px", 
-  
+  marginBottom: "20px",
+
 });
 
 export default function Classroom() {
@@ -175,19 +178,11 @@ export default function Classroom() {
         },
       ],
     },
-  
+
   ];
+  ///Upcoming activities/////////////////////////////////////////////////////////////////////
 
-  const handleExpandClick = (classId) => {
-    setSelectedClass(classId);
-    setExpanded(!expanded);
-  };
-
-  const handleBackClick = () => {
-    setSelectedClass(null);
-    setExpanded(false);
-  };
-
+  //////////////////////////////////////////////////////////////////////////
   return (
     <div>
       <div className="classeslist">
@@ -254,7 +249,28 @@ export default function Classroom() {
           )}
         </div>
         <div className="corcesfind">
-          {/* Other content */}
+          <div className="calender">
+            <ResponsiveDateCalendar />
+          </div>
+
+          <div className="upcomingactive">
+            <h6>Timeline</h6>
+            <div style={{ display: "flex", width: '100%', justifyContent: 'space-between', padding: '2px' }}>
+              <CustomizedMenus />
+              <Menuitem/>
+
+            </div>
+            <hr style={{ border: '1px solid #C4C8CC' }} />
+            
+              
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                <div>
+                <img src="src/assets/activities.svg" alt="" srcset="" />
+                </div>
+             </div>
+             <p style={{ color: '#C4C8CC' ,justifyContent:'center' ,textAlign:'center',alignItems:'center' ,margin:'10px' }}>No upcoming activities due</p></div>
+
+          
         </div>
       </div>
     </div>

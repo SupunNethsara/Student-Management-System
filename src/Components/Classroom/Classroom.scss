@@ -1,74 +1,102 @@
-.classeslist{
+.classeslist {
     width: 100%;
     display: flex;
     height: auto;
-    
-    
-    .imgcorces{
+
+
+    .imgcorces {
         width: 75%;
         height: auto;
     }
 
-    .corcesfind{
+    .corcesfind {
         width: 25%;
         height: auto;
     }
 }
-@media (min-width: 800px) and (max-width: 1300px){
-    .classeslist{
-       flex-wrap: wrap;
+
+.corcesfind {
+    padding: 10px;
+    
+
+    .calender {
+        box-shadow: 0 2px 5px 0 rgba(83, 75, 202, 0.199), 0 4px 15px 0 rgba(71, 73, 196, 0.19);
+
+    }
+
+    h6 {
+        padding: 10px;
+    }
+
+    .upcomingactive {
+    box-shadow: 0 2px 5px 0 rgba(83, 75, 202, 0.199), 0 4px 15px 0 rgba(71, 73, 196, 0.19);
+    margin-top: 15px;
+    padding: 20px;
+
+    img{
+        width: 70px;
+  
+    }
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1300px) {
+    .classeslist {
+        flex-wrap: wrap;
         width: 100%;
         height: 100%;
-        
-        .imgcorces{
+
+        .imgcorces {
             width: 100%;
             height: auto;
         }
-    
-        .corcesfind{
+
+        .corcesfind {
             width: 100%;
             height: auto;
         }
     }
 }
 
-@media (min-width: 660px) and (max-width:800px){
-    .classeslist{
-       flex-wrap: wrap;
+@media (min-width: 660px) and (max-width:800px) {
+    .classeslist {
+        flex-wrap: wrap;
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
-        
-        .imgcorces{
+
+        .imgcorces {
             width: 100%;
             height: auto;
         }
-    
-        .corcesfind{
+
+        .corcesfind {
             width: 100%;
             height: auto;
         }
-        .cardflex{
+
+        .cardflex {
             width: 100%;
         }
     }
 }
-@media (min-width: 300px) and (max-width:610px){
-    .classeslist{
-       flex-wrap: wrap;
+
+@media (min-width: 300px) and (max-width:610px) {
+    .classeslist {
+        flex-wrap: wrap;
         width: 100%;
         height: 100%;
-        
-        .imgcorces{
+
+        .imgcorces {
             width: 100%;
             height: auto;
         }
-    
-        .corcesfind{
+
+        .corcesfind {
             width: 100%;
             height: auto;
         }
-        
+
     }
 }
