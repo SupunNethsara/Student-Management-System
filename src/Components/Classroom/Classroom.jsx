@@ -10,17 +10,31 @@ import { red } from "@mui/material/colors";
 import FolderIcon from "@mui/icons-material/Folder";
 import Typography from "@mui/material/Typography";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import './Classroom.scss'
+
 const FlexContainer = styled("div")({
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-between",
+  gap: "20px",
+  padding: "10px", 
 });
 
 const FlexItem = styled("div")({
-  flexBasis: "30%",
-  marginBottom: "30px",
+  flexBasis: "100%",
+  '@media (min-width: 700px)': {
+    flexBasis: "100%",  
+  },
+  '@media (min-width: 600px)': {
+    flexBasis: "100%", 
+ 
+  },
+  '@media (min-width: 900px)': {
+    flexBasis: "30%", 
+  },
+  marginBottom: "20px", 
+  
 });
 
 export default function Classroom() {
@@ -73,30 +87,6 @@ export default function Classroom() {
         },
       ],
     },
-
-    {
-      id: 1,
-      title: "Semester II",
-      description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
-      subjects: [
-        {
-          name: "Subject 1",
-          pdfs: [
-            { name: "Lecture 1", link: "pdf_link_1" },
-            { name: "Lecture 2", link: "pdf_link_2" },
-          ],
-        },
-        {
-          name: "Subject 2",
-          pdfs: [
-            { name: "Lecture 3", link: "pdf_link_3" },
-            { name: "Lecture 4", link: "pdf_link_4" },
-          ],
-        },
-      ],
-    },
-
     {
       id: 1,
       title: "Semester II",
@@ -141,7 +131,6 @@ export default function Classroom() {
         },
       ],
     },
-
     {
       id: 1,
       title: "Semester II",
@@ -164,7 +153,29 @@ export default function Classroom() {
         },
       ],
     },
-    // Add other class items as needed...
+    {
+      id: 1,
+      title: "Semester II",
+      description: "IT2206 Fundamentals of Software Engineer",
+      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
+      subjects: [
+        {
+          name: "Subject 1",
+          pdfs: [
+            { name: "Lecture 1", link: "pdf_link_1" },
+            { name: "Lecture 2", link: "pdf_link_2" },
+          ],
+        },
+        {
+          name: "Subject 2",
+          pdfs: [
+            { name: "Lecture 3", link: "pdf_link_3" },
+            { name: "Lecture 4", link: "pdf_link_4" },
+          ],
+        },
+      ],
+    },
+  
   ];
 
   const handleExpandClick = (classId) => {
@@ -184,8 +195,8 @@ export default function Classroom() {
           {!selectedClass ? (
             <FlexContainer>
               {classes.map((classItem) => (
-                <FlexItem key={classItem.id}>
-                  <Card sx={{ maxWidth: 345 }}>
+                <FlexItem className="cardflex" key={classItem.id}>
+                  <Card sx={{ maxWidth: 500, width: '100%' }}>
                     <CardHeader
                       avatar={
                         <Avatar sx={{ bgcolor: red[500] }} aria-label="class">
@@ -243,10 +254,9 @@ export default function Classroom() {
           )}
         </div>
         <div className="corcesfind">
-
+          {/* Other content */}
         </div>
       </div>
-
     </div>
   );
 }

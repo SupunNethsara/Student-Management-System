@@ -1,7 +1,7 @@
 .classeslist{
     width: 100%;
     display: flex;
-    height: 80vh;
+    height: auto;
     
     
     .imgcorces{
@@ -12,5 +12,63 @@
     .corcesfind{
         width: 25%;
         height: auto;
+    }
+}
+@media (min-width: 800px) and (max-width: 1300px){
+    .classeslist{
+       flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        
+        .imgcorces{
+            width: 100%;
+            height: auto;
+        }
+    
+        .corcesfind{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (min-width: 660px) and (max-width:800px){
+    .classeslist{
+       flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        
+        .imgcorces{
+            width: 100%;
+            height: auto;
+        }
+    
+        .corcesfind{
+            width: 100%;
+            height: auto;
+        }
+        .cardflex{
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 300px) and (max-width:610px){
+    .classeslist{
+       flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        
+        .imgcorces{
+            width: 100%;
+            height: auto;
+        }
+    
+        .corcesfind{
+            width: 100%;
+            height: auto;
+        }
+        
     }
 }
