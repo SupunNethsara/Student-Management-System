@@ -208,7 +208,7 @@ export default function Classroom() {
                     <CardHeader
                       avatar={
                         <Avatar sx={{ backgroundColor:'#0A549E' }} aria-label="class">
-                          <AssignmentIcon />
+                          {classItem.title.charAt(0)}
                         </Avatar>
                       }
                       action={
