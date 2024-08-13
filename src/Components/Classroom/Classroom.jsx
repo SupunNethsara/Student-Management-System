@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
-import { red } from "@mui/material/colors";
+
 import FolderIcon from "@mui/icons-material/Folder";
 import Typography from "@mui/material/Typography";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
@@ -14,6 +14,7 @@ import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import ResponsiveDateCalendar from "../calender/ResponsiveDateCalendar";
 import CustomizedMenus from "./button/CustomizedMenus";
 import Menuitem from "./button/Menuitem";
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import './Classroom.scss'
 
 const FlexContainer = styled("div")({
@@ -47,9 +48,9 @@ export default function Classroom() {
   const classes = [
     {
       id: 1,
-      title: "Semester II",
+      title: "Semester I",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
+      imageUrl: "src/assets/education2.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -72,7 +73,7 @@ export default function Classroom() {
       id: 1,
       title: "Semester II",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
+      imageUrl: "src/assets/education2.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -92,9 +93,9 @@ export default function Classroom() {
     },
     {
       id: 1,
-      title: "Semester II",
+      title: "Semester III",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
+      imageUrl: "src/assets/education2.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -114,9 +115,9 @@ export default function Classroom() {
     },
     {
       id: 1,
-      title: "Semester II",
+      title: "Semester IV",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
+      imageUrl: "src/assets/education2.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -136,9 +137,9 @@ export default function Classroom() {
     },
     {
       id: 1,
-      title: "Semester II",
+      title: "Semester V",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
+      imageUrl: "src/assets/education2.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -158,9 +159,9 @@ export default function Classroom() {
     },
     {
       id: 1,
-      title: "Semester II",
+      title: "Semester VI",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/pexels-emily-ranquist-1205651.jpg",
+      imageUrl: "src/assets/education2.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -206,8 +207,8 @@ export default function Classroom() {
                   <Card sx={{ maxWidth: 500, width: '100%' }}>
                     <CardHeader
                       avatar={
-                        <Avatar sx={{ bgcolor: red[500] }} aria-label="class">
-                          {classItem.title.charAt(0)}
+                        <Avatar sx={{ backgroundColor:'#95C0EB' }} aria-label="class">
+                          <AssignmentIcon />
                         </Avatar>
                       }
                       action={
