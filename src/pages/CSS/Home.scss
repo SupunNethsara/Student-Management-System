@@ -12,10 +12,11 @@
 }
 
 .leftside {
-    width: 75%;
+    width: 78%;
     height: 100%;
     padding: 0;
     color: rgb(243, 236, 236);
+    margin-top: 15px;
 
 
     .imgpng {
@@ -35,7 +36,7 @@
         width: 100%;
         height: auto;
         padding: 10px;
-        background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url('src/assets/pexels-emily-ranquist-1205651.jpg');
+        background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url('src/assets/education3.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         text-align: center;
@@ -46,7 +47,7 @@
 }
 
 .rightside {
-    width: 25%;
+    width: 22%;
     height: 100%;
     justify-content: center;
     align-items: center;

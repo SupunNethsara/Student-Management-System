@@ -11,33 +11,18 @@ import FolderIcon from "@mui/icons-material/Folder";
 import Typography from "@mui/material/Typography";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
-import ResponsiveDateCalendar from "../calender/ResponsiveDateCalendar";
+import CourseOverview from "./Corce-overview/course-overview";
 import CustomizedMenus from "./button/CustomizedMenus";
 import Menuitem from "./button/Menuitem";
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import './Classroom.scss'
 
+
+
 const FlexContainer = styled("div")({
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-  gap: "20px",
-  padding: "10px",
+
 });
-
 const FlexItem = styled("div")({
-  flexBasis: "100%",
-  '@media (min-width: 700px)': {
-    flexBasis: "100%",
-  },
-  '@media (min-width: 600px)': {
-    flexBasis: "100%",
-
-  },
-  '@media (min-width: 900px)': {
-    flexBasis: "30%",
-  },
-  marginBottom: "20px",
 
 });
 
@@ -50,7 +35,7 @@ export default function Classroom() {
       id: 1,
       title: "Semester I",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/education2.avif",
+      imageUrl: "src/assets/education4.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -70,10 +55,10 @@ export default function Classroom() {
     },
 
     {
-      id: 1,
+      id: 2,
       title: "Semester II",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/education2.avif",
+      imageUrl: "src/assets/education4.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -92,10 +77,10 @@ export default function Classroom() {
       ],
     },
     {
-      id: 1,
+      id: 3,
       title: "Semester III",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/education2.avif",
+      imageUrl: "src/assets/education4.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -114,10 +99,10 @@ export default function Classroom() {
       ],
     },
     {
-      id: 1,
+      id: 4,
       title: "Semester IV",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/education2.avif",
+      imageUrl: "src/assets/education4.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -136,10 +121,10 @@ export default function Classroom() {
       ],
     },
     {
-      id: 1,
+      id: 5,
       title: "Semester V",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/education2.avif",
+      imageUrl: "src/assets/education4.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -158,10 +143,10 @@ export default function Classroom() {
       ],
     },
     {
-      id: 1,
+      id: 6,
       title: "Semester VI",
       description: "IT2206 Fundamentals of Software Engineer",
-      imageUrl: "src/assets/education2.avif",
+      imageUrl: "src/assets/education4.avif",
       subjects: [
         {
           name: "Subject 1",
@@ -193,21 +178,21 @@ export default function Classroom() {
     setExpanded(false);
   };
 
-  ///Upcoming activities/////////////////////////////////////////////////////////////////////
 
-  //////////////////////////////////////////////////////////////////////////
+
   return (
+
     <div>
       <div className="classeslist">
         <div className="imgcorces">
           {!selectedClass ? (
-            <FlexContainer>
+            <FlexContainer className="flexcontainer" >
               {classes.map((classItem) => (
-                <FlexItem className="cardflex" key={classItem.id}>
-                  <Card sx={{ maxWidth: 500, width: '100%' }}>
+                <FlexItem style={{ margin: '15px' }} className="cardflex" key={classItem.id}>
+                  <Card sx={{ width: '100%', boxShadow: '0 2px 5px 0 rgba(83, 75, 202, 0.199), 0 4px 15px 0 rgba(71, 73, 196, 0.19)' }}>
                     <CardHeader
                       avatar={
-                        <Avatar sx={{ backgroundColor:'#0A549E' }} aria-label="class">
+                        <Avatar sx={{ backgroundColor: '#EA4450' }} aria-label="class">
                           {classItem.title.charAt(0)}
                         </Avatar>
                       }
@@ -220,6 +205,7 @@ export default function Classroom() {
                       subheader={classItem.description}
                     />
                     <CardMedia
+                      sx={{ objectFit: "cover" }}
                       component="img"
                       height="194"
                       image={classItem.imageUrl}
@@ -262,30 +248,36 @@ export default function Classroom() {
           )}
         </div>
         <div className="corcesfind">
-          <div className="calender">
-            <ResponsiveDateCalendar />
-          </div>
+   
 
           <div className="upcomingactive">
             <h6>Timeline</h6>
             <div style={{ display: "flex", width: '100%', justifyContent: 'space-between', padding: '2px' }}>
               <CustomizedMenus />
-              <Menuitem/>
+              <Menuitem />
 
             </div>
             <hr style={{ border: '1px solid #C4C8CC' }} />
-            
-              
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                <div>
-                <img src="src/assets/activities.svg" alt="" srcset="" />
-                </div>
-             </div>
-             <p style={{ color: '#C4C8CC' ,justifyContent:'center' ,textAlign:'center',alignItems:'center' ,margin:'10px' }}>No upcoming activities due</p></div>
+
+
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+              <div>
+                <img src="src/assets/activities.svg" alt="" />
+              </div>
+            </div>
+            <p style={{ color: '#C4C8CC', justifyContent: 'center', textAlign: 'center', alignItems: 'center', margin: '10px' }}>No upcoming activities due</p></div>
+          <div/>
+
+
+
+          <div className="calender">
+            <CourseOverview />
+          </div>
 
           
         </div>
       </div>
     </div>
+
   );
 }

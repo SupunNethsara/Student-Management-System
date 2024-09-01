@@ -7,6 +7,8 @@
     .imgcorces {
         width: 75%;
         height: auto;
+
+       
     }
 
     .corcesfind {
@@ -30,15 +32,18 @@
 
     .upcomingactive {
     box-shadow: 0 2px 5px 0 rgba(83, 75, 202, 0.199), 0 4px 15px 0 rgba(71, 73, 196, 0.19);
-    margin-top: 15px;
+    margin-top: 8px;
     padding: 20px;
+  
+
 
     img{
         width: 70px;
-  
+       
     }
     }
 }
+
 
 @media (min-width: 800px) and (max-width: 1300px) {
     .classeslist {
